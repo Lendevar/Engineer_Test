@@ -5,15 +5,15 @@ class RemoveLetters
 {   
     void RemoveDups(StringBuilder str){
         if (str.Length != 0){
-            char currentLetter = str[0];
+            char currentLetter = str[0];  //Переменная, содержащая текущий символ (начинается с самого первого)
             
             for (int i = 1; i < str.Length; i++) {
-                if (str[i] == currentLetter){
-                 str.Remove(i,1);
+                if (str[i] == currentLetter){ //Проверка, если текущий символ не менялся
+                 str.Remove(i,1);  //Удаление символа
                  i--;
                 }
                 else {
-                    currentLetter = str[i];
+                    currentLetter = str[i]; //Если текущий символ изменился, заносим его в переменную
                 }
             }
         }
